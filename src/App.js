@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import {TxTable} from "./components/TxTable";
+import {GetAvailableRewards} from "./components/Rewards";
+import {Grid} from "@material-ui/core";
 
-function App() {
+
+export const App = () =>{
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+        <Grid>
+            <Grid>
+                <TxTable/>
+            </Grid>
+            <Grid>
+                <GetAvailableRewards/>
+            </Grid>
+        </Grid>
     </div>
   );
 }
-
-export default App;
