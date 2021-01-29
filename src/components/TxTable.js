@@ -54,7 +54,7 @@ export const TxTable = () =>{
     return (
         <MaterialTable
             icons={tableIcons}
-            title="Editable Example"
+            title="Transactions"
             columns={state.columns}
             data={state.data}
             editable={{
