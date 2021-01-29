@@ -26,10 +26,9 @@ const TxReducer = (state = inItData,action) => {
                 ]
             }
         case 'DELETE':
-            return {
-                ...state,
-                transactions: action.payload
-            }
+            const data = [...state.transactions];
+            data.splice(data.indexOf(action.payload), 1);
+            return { ...state, transactions: data };
         default:
             return {...state}
     }
